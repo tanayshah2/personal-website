@@ -1,162 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanay Shah</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+  <meta charset="UTF-8">
+  <title>Tanay Shah</title>
+  <style>
+    @font-face {
+      font-family: 'Computer Modern';
+      src: url('fonts/cmunrm.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Computer Modern';
+      src: url('fonts/cmunbx.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Computer Modern';
+      src: url('fonts/cmunti.woff') format('woff');
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: 'Computer Modern';
+      src: url('fonts/cmunbi.woff') format('woff');
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    /* Basic page styling */
+    body {
+      background: #ffeacb repeat;
+      /* background: url('assets/vintage-concrete.webp') repeat; */
+      color: #4A0404;
+      margin: 0;
+      padding: 0;
+      font-family: 'Computer Modern', serif;
+    }
+
+    .container {
+      width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    header > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #4A0404;
+    }
+
+    section h2,
+    section p {
+      margin-top: 0;
+    }
+
+    section {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Tanay Shah</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Tanay Shah</div>
-        <div class="hamburger-wrapper">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/me.png" alt="Tanay Shah" />
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hi! I'm</p>
-            <h1 class="title">Tanay Shah</h1>
-            <p class="section__text__p1">Software Engineer and Student</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/10-18-24 Tanay Shah Resume.pdf')">
-                    My Resume
-                </button>
-                <img
-                    src="./assets/linkedin.png"
-                    alt="My LinkedIn Profile"
-                    class="icon"
-                    onclick="location.href='https://www.linkedin.com/in/tanay2/'"
-                />
-                <img
-                    src="./assets/github.png"
-                    alt="My GitHub Profile"
-                    class="icon"
-                    onclick="location.href='https://github.com/tanayshah2'"
-                />
-                <a href="mailto:tanayshah960@gmail.com">
-                    <img
-                        src="./assets/email.png"
-                        alt="My Email"
-                        class="icon"
-                    />
-                </a>
-            </div>
-        </div>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Tanay Shah</h1>
+        <img src="assets/me.jpeg" alt="Me" style="width: 100px; height: auto;">
+      </div>
+    </header>
+    
+    <hr>
+    
+    <section>
+      <p>
+        I'm currently pursuing a Bachelor's degree in Mathematics and Data Science at Northeastern University.
+        I'm interested in decision theory and maximizing expected value.
+      </p>
     </section>
-    <section id="about">
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-          <div class="section__pic-container">
-            <img
-              src="./assets/about-me.png"
-              alt="About me"
-              class="about-me"
-            />
-          </div>
-          <div class="about-details-container">
-            <div class="text-container">
-              <p class="section__text__p2">
-                Hi, I'm Tanay! I'm currently studying Data Science and Mathematics at Northeastern University in Boston, but I'm originally from Portland, Oregon. Through my coursework alongside my past experience in software development and bioinformatics research, I've built strong problem-solving skills, particularly in developing efficient algorithms, leveraging machine learning concepts, and building scalable systems.
-              </p>
-            </div>
-          </div>
-        </div>
-        </section>
-        <section id="experience">
-            <h1 class="title">Experience</h1>
-            <div class="card-container">
-                <div class="experience-card">
-                    <div class="card-image">
-                        <img src="./assets/c1.jpg" alt="Capital One">
-                    </div>
-                    <div class="card-content">
-                        <h3>(Incoming) Software Engineer Intern</h3>
-                        <h4>Capital One</h4>
-                        <h5>Starting June 2025</h5>
-                        <p>Stay tuned!</p>       
-                    </div>
-                </div>
-        
-                <div class="experience-card">
-                    <div class="card-image">
-                        <img src="./assets/hms.jpeg" alt="Harvard Medical School">
-                    </div>
-                    <div class="card-content">
-                        <h3>Student Researcher</h3>
-                        <h4>Harvard Medical School</h4>
-                        <h5>July 2024 - Present</h5>
-                        <p>Performed genomic and causal analysis on data from 30,000+ patients of Mass General Brigham and associated hospitals.
-                        </p>
-                        <p>Identified trends and triggers associated with the onset of rhabdomyolysis, a life-threatening degenerative muscle tissue condition.
-                        </p>
-                    </div>
-                </div>
-        
-                <div class="experience-card">
-                    <div class="card-image">
-                        <img src="./assets/northeastern.png" alt="Northeastern University">
-                    </div>
-                    <div class="card-content">
-                        <h3>Machine Learning Researcher</h3>
-                        <h4>Gyori Lab for Computational Biomedicine at Northeastern University</h4>
-                        <h5>May 2025 - August 2024</h5>
-                        <p>Developed an ML model to query and score new PubMed papers on their relevance to the Bioregistry using TF-IDF vectorization and aggregating classifiers. Achieved an AUC-ROC score of 0.991, indicating highly precise results, significantly expediting the process of discovering and curating new resources.
-                        </p>
-                        <p>Designed a workflow to automate the monthly deployment of the above ML pipeline’s results to a GitHub issue.
-                        </p>
-                        <p>Implemented a script to automate the analysis and visualization of changes in the Bioregistry’s metadata over time. Utilized to create visuals for presentations that secured lab funding.
-                        </p>
-                        <p>Updated and added 1,500+ lines of metadata in the Bioregistry, fixing degraded resources and curating new entries, enhancing the registry’s comprehensiveness and accuracy.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>        
-        <section id="contact">
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-            <img
-                src="./assets/email.png"
-                alt="Email icon"
-                class="icon contact-icon"
-            />
-            <p><a href="mailto:tanayshah960@gmail.com">tanayshah960@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-            <img
-                src="./assets/linkedin.png"
-                alt="LinkedIn icon"
-                class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-            </div>
-        </div>
-        </section>
-    <script src="script.js"></script>
+    
+    <hr>
+    
+    <section id="experience">
+      <h2>Experience</h2>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="font-weight: bold; width: 70%;">Software Engineer Intern, Capital One</td>
+          <td style="font-style: italic; width: 30%; text-align: right;">Expected: June - August 2025</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top: 5px;">Incoming Summer 2025.</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding: 10px 0;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; width: 70%;">Research Assistant, Northeastern University (SATH Lab)</td>
+          <td style="font-style: italic; width: 30%; text-align: right;">February 2025 - Present</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top: 5px;">
+            Applying explainable deep learning and topological data analysis to study the emergence and persistence of features in time-series data.
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding: 10px 0;"></td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; width: 70%;">Research Assistant, Northeastern University (Gyori Lab)</td>
+          <td style="font-style: italic; width: 30%; text-align: right;">May - August 2024</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top: 5px;">
+            Utilized TF-IDF vectorization and ensemble learning to automate resource curation for the <a href=https://bioregistry.io/ target="_blank">Bioregistry</a>.
+          </td>
+        </tr>
+      </table>
+    </section>
+    
+    <hr>
+    
+    <footer style="text-align: center; margin-top: 20px;">
+      <p>
+        tanayshah960 [at] gmail [dot] com &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="https://www.linkedin.com/in/tanay2/" target="_blank">linkedin.com/in/tanay2/</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
